@@ -72,12 +72,39 @@ body {
     width: 60%;
     margin: 0 auto;
   }
+  .upload {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .images {
     width: 90%;
     margin: 0 auto;
+  }
+  .upload {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .container .about {
+    font-size: 20px;
+  }
+  .images {
+    width: 74%;
+  }
+  .images .object {
+    width: 48%;
+    margin: 10px 0px;
+  }
+  .images .object .type {
+    font-size: 12px;
+  }
+  .images .object .type .time {
+    display: none;
   }
 }
 

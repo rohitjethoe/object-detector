@@ -1,6 +1,6 @@
 let onLoadTime = new Date().getTime();
 
-let emojis = ['🐱', '🐶', '🍷', '🍕', '🖼']
+const emojis = ['🐱', '🐶', '🍷', '🍕', '🖼']
 
 mobilenet.load().then(model => {
     for(let i = 0; i < 4; i++) {
@@ -11,7 +11,7 @@ mobilenet.load().then(model => {
         time = (time - onLoadTime) / 2000;
 
         model.classify(img).then(predictions => {
-            document.querySelector(`.name-${i}`).innerHTML = `${emojis[i]} ${predictions[0].className} in ${time} seconds`;
+            document.querySelector(`.name-${i}`).innerHTML = `${emojis[i]} ${predictions[0].className} <span class='time'>in ${time} seconds</span>`;
             document.querySelector(`.probability-${i}`).innerHTML = `probability: ${(predictions[0].probability * 100).toFixed(2)}%`;
         });
     }
@@ -21,7 +21,6 @@ document.querySelector('.file').onchange = (evt) => {
     var tgt = evt.target || window.event.srcElement,
     files = tgt.files;
 
-    // FileReader support
     if (FileReader && files && files.length) {
         var fr = new FileReader();
         fr.onload = function () {
