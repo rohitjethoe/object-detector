@@ -110,6 +110,15 @@ body {
   .images .object .type .time {
     display: none;
   }
+  .upload {
+    margin-left: 13%;
+  }
+  .upload .upload-title {
+    font-size: 15px;
+  }
+  .upload input {
+    margin-top: 10px;
+  }
 }
 
 .footer {

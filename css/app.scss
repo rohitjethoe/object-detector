@@ -100,6 +100,16 @@ body {
             }
         }
     }
+
+    .upload {
+        margin-left: 13%;
+        .upload-title {
+            font-size: 15px;
+        }
+        input {
+            margin-top: 10px;
+        }
+    }
 }
 
 .footer {
