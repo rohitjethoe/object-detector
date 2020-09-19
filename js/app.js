@@ -1,6 +1,5 @@
-
 mobilenet.load().then(model => {
-    for(let i = 0; i < 2; i++) {
+    for(let i = 0; i < 3; i++) {
         const img = document.querySelector(`.image-${i}`);
 
         model.classify(img).then(predictions => {
