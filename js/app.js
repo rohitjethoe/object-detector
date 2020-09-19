@@ -1,6 +1,6 @@
 let onLoadTime = new Date().getTime();
 
-let emojis = ['🐱', '🐶', '🍷', '🍕']
+let emojis = ['🐱', '🐶', '🍷', '🍕', '🖼']
 
 mobilenet.load().then(model => {
     for(let i = 0; i < 4; i++) {
@@ -16,3 +16,26 @@ mobilenet.load().then(model => {
         });
     }
 });
+
+document.querySelector('.file').onchange = (evt) => {
+    var tgt = evt.target || window.event.srcElement,
+    files = tgt.files;
+
+    // FileReader support
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            document.querySelector('.uploaded-image').src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    }
+
+    const img = document.querySelector('.uploaded-image');
+
+    mobilenet.load().then(model => {
+        model.classify(img).then(predictions => {
+            document.querySelector(`.name-4`).innerHTML = `${emojis[4]} ${predictions[0].className}`;
+            document.querySelector(`.probability-4`).innerHTML = `probability ${(predictions[0].probability * 100).toFixed(2)}%`
+        })
+    })
+}
