@@ -1,4 +1,58 @@
-.image img {
-  width: 50%;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: calc(100vh - 20.5px);
+  background-color: #fafbfc;
+}
+
+.container .about {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.images .object {
+  margin: 10px 10px;
+  width: 46%;
+}
+
+.images .object img {
+  width: 100%;
+}
+
+.images .object .type {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.images .object-2 {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+.footer {
+  background-color: #fafbfc;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  padding: 4px;
 }
 /*# sourceMappingURL=app.css.map */
