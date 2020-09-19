@@ -54,6 +54,10 @@ body {
           transform: translateY(-15%);
 }
 
+.upload .upload-title {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .upload .object {
   margin: 10px 10px;
   width: 46%;
@@ -85,7 +89,7 @@ body {
   }
   .upload {
     width: 90%;
-    margin-left: 5%;
+    margin-left: 6.8%;
   }
 }
 
