@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+body {
+    background-color: #fafbfc;
+}
+
 .container {
     min-height: calc(100vh - 20.5px);
     background-color: #fafbfc;
@@ -17,6 +21,7 @@
 }
 
 .images {
+    margin-top: 5%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -37,8 +42,34 @@
     }
 }
 
+.upload {
+    .object { 
+        margin: 10px 10px;
+        width: 46%;
+        img {
+            width: 100%;
+        }
+        .type {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .images {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .images {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 .footer {
-    background-color: #fafbfc;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center; 
     padding: 4px;

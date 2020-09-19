@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #fafbfc;
+}
+
 .container {
   min-height: calc(100vh - 20.5px);
   background-color: #fafbfc;
@@ -17,6 +21,7 @@
 }
 
 .images {
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,8 +54,34 @@
           transform: translateY(-15%);
 }
 
+.upload .object {
+  margin: 10px 10px;
+  width: 46%;
+}
+
+.upload .object img {
+  width: 100%;
+}
+
+.upload .object .type {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media only screen and (min-width: 1000px) {
+  .images {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .images {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .footer {
-  background-color: #fafbfc;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   padding: 4px;
