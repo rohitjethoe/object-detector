@@ -11,6 +11,7 @@ mobilenet.load().then(model => {
         time = (time - onLoadTime) / 2000;
 
         model.classify(img).then(predictions => {
+            document.querySelector(`.image-${i}`).style.display = "block";
             document.querySelector(`.name-${i}`).innerHTML = `${emojis[i]} ${predictions[0].className} <span class='time'>in ${time} seconds</span>`;
             document.querySelector(`.probability-${i}`).innerHTML = `probability: ${(predictions[0].probability * 100).toFixed(2)}%`;
         });
